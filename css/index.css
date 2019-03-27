@@ -219,3 +219,13 @@ p {
   padding: 2rem;
   border-bottom: 1px solid #fff;
 }
+.skills {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.skills div {
+  background-color: blue;
+  width: 45%;
+  margin: 0 5%;
+}
