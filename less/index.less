@@ -139,7 +139,11 @@ body {
 	width: 100%;
 	max-width: 2000px;
 	margin: 0 auto;
-	.test-color1;
+	background-color: @background-color;
+
+		section {
+			margin: 5rem 0;
+		}
 
 	@media (max-width: 500px) {
 		.test-color2;
@@ -162,6 +166,7 @@ p {
 
 .main-header {
 	.flex-center-around;
+	margin-top: -5rem;
 	padding: 2rem;
 	background-color: @primary-color;
 	width: 100%;
@@ -236,10 +241,19 @@ p {
 
 	div {
 		.test-color3;
+		display: flex;
+		flex-flow: column nowrap;
 		width: 45%;
+		height: 60rem;
 		margin: 0 5%;
+
 			ul {
 				.flex-center-around;
+			}
+
+			img {
+				width: 80%;
+				margin: 0 auto;
 			}
 	}
 }
@@ -247,6 +261,10 @@ p {
 // Work Styles
 
 .work {
+
+		h1 {
+			.heading-underline;
+		}
 
 		div {
 			.test-color3;

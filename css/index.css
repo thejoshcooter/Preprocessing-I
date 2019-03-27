@@ -147,7 +147,10 @@ body {
   width: 100%;
   max-width: 2000px;
   margin: 0 auto;
-  background-color: green;
+  background-color: #2A2A2A;
+}
+.wrapper section {
+  margin: 5rem 0;
 }
 @media (max-width: 500px) {
   .wrapper {
@@ -168,6 +171,7 @@ p {
   justify-content: space-between;
   align-items: center;
   justify-content: space-around;
+  margin-top: -5rem;
   padding: 2rem;
   background-color: #AE3030;
   width: 100%;
@@ -229,7 +233,10 @@ p {
 }
 .skills div {
   background-color: blue;
+  display: flex;
+  flex-flow: column nowrap;
   width: 45%;
+  height: 60rem;
   margin: 0 5%;
 }
 .skills div ul {
@@ -237,6 +244,14 @@ p {
   justify-content: space-between;
   align-items: center;
   justify-content: space-around;
+}
+.skills div img {
+  width: 80%;
+  margin: 0 auto;
+}
+.work h1 {
+  padding: 2rem;
+  border-bottom: 1px solid #fff;
 }
 .work div {
   background-color: blue;
