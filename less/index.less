@@ -58,9 +58,17 @@ html, body {
 }
 
 // Variables
+
+// Colors
 @background-color: #2A2A2A;
 @primary-color: #AE3030;
 @highlight-color: #D46A6A;
+
+// Fonts
+@ubuntu: 'Ubuntu', sans-serif;
+@monty: 'Montserrat', sans-serif;
+
+// Test Variables
 @test-color1: green;
 @test-color2: red;
 @test-color3: blue;
@@ -77,6 +85,7 @@ html, body {
 	justify-content: space-around;
 }
 
+// Test Mixins
 .test-color1() {
 	background-color: green;
 }
@@ -89,7 +98,7 @@ html, body {
 	background-color: blue;
 }
 
-// Styles
+// Global Styles
 
 .wrapper {
 	width: 100%;
@@ -99,5 +108,14 @@ html, body {
 
 	@media (max-width: 500px) {
 		.test-color2;
+	}
+}
+
+// Header & Nav Styles
+
+.main-header {
+	.test-color2;
+	span {
+		text-transform: uppercase;
 	}
 }

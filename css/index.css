@@ -145,3 +145,9 @@ body {
     background-color: red;
   }
 }
+.main-header {
+  background-color: red;
+}
+.main-header span {
+  text-transform: uppercase;
+}
