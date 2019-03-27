@@ -163,7 +163,10 @@ p {
 .main-header {
 	.flex-center-around;
 	padding: 2rem;
-	.test-color2;
+	background-color: @primary-color;
+	width: 100%;
+	position: fixed;
+	z-index: 100;
 
 		span {
 			.uppercase;
@@ -182,7 +185,7 @@ p {
 				font-size: @font-heading2;
 				margin: 0 1rem;
 				padding: 1.5rem 3rem 1.5rem 1.5rem;
-				border-right: 1px solid #fff;
+				border-right: 1px solid @highlight-color;
 				// .test-color1;
 			}
 
@@ -235,5 +238,20 @@ p {
 		.test-color3;
 		width: 45%;
 		margin: 0 5%;
+			ul {
+				.flex-center-around;
+			}
 	}
+}
+
+// Work Styles
+
+.work {
+
+		div {
+			.test-color3;
+			margin: 2rem;
+			padding: 3rem;
+			border-bottom: 1px solid #fff;
+		}
 }
