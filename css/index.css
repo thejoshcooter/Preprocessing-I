@@ -178,6 +178,9 @@ body {
 .main-header nav a {
   text-decoration: none;
   font-size: 2rem;
-  margin: 0 10px;
+  margin: 0 2rem;
   background-color: green;
+}
+.hero img {
+  width: 100%;
 }
