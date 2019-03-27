@@ -130,9 +130,18 @@ table {
 * {
   box-sizing: border-box;
 }
+html {
+  font-size: 62.5%;
+}
 html,
 body {
   height: 100%;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  background-color: #2A2A2A;
+  color: #fff;
 }
 .wrapper {
   width: 100%;
@@ -146,8 +155,29 @@ body {
   }
 }
 .main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: space-around;
+  margin: 2rem 0;
+  padding: 2rem;
   background-color: red;
 }
 .main-header span {
   text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2rem;
+}
+.main-header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: space-around;
+}
+.main-header nav a {
+  text-decoration: none;
+  font-size: 2rem;
+  margin: 0 10px;
+  background-color: green;
 }
