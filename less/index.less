@@ -58,9 +58,12 @@ html, body {
 }
 
 // Variables
-@background-color: #141618;
+@background-color: #2A2A2A;
 @primary-color: #AE3030;
 @highlight-color: #D46A6A;
+@test-color1: green;
+@test-color2: red;
+@test-color3: blue;
 
 // Mixins
 .flex-center-between() {
@@ -72,4 +75,29 @@ html, body {
 .flex-center-around() {
 	.flex-center-between;
 	justify-content: space-around;
+}
+
+.test-color1() {
+	background-color: green;
+}
+
+.test-color2() {
+	background-color: red;
+}
+
+.test-color3() {
+	background-color: blue;
+}
+
+// Styles
+
+.wrapper {
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto;
+	.test-color1;
+
+	@media (max-width: 500px) {
+		.test-color2;
+	}
 }
