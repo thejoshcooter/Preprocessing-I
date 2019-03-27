@@ -63,3 +63,13 @@ html, body {
 @highlight-color: #D46A6A;
 
 // Mixins
+.flex-center-between() {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.flex-center-around() {
+	.flex-center-between;
+	justify-content: space-around;
+}
