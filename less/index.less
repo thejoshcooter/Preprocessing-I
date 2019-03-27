@@ -108,6 +108,11 @@ html, body {
 	text-align: center;
 }
 
+.heading-underline() {
+	padding: 2rem;
+	border-bottom: 1px solid #fff;
+}
+
 // Test Mixins
 .test-color1() {
 	background-color: green;
@@ -132,7 +137,7 @@ body {
 
 .wrapper {
 	width: 100%;
-	max-width: 1100px;
+	max-width: 2000px;
 	margin: 0 auto;
 	.test-color1;
 
@@ -141,11 +146,22 @@ body {
 	}
 }
 
+h1 {
+	font-size: @font-heading1;
+}
+
+h2 {
+	font-size: @font-heading2;
+}
+
+p {
+	padding: 2rem;
+}
+
 // Header & Nav Styles
 
 .main-header {
 	.flex-center-around;
-	margin: 2rem 0;
 	padding: 2rem;
 	.test-color2;
 
@@ -160,10 +176,18 @@ body {
 			.flex-center-around;
 
 			a {
+				.text-center;
 				text-decoration: none;
+				color: #fff;
 				font-size: @font-heading2;
-				margin: 0 2rem;
-				.test-color1;
+				margin: 0 1rem;
+				padding: 1.5rem 3rem 1.5rem 1.5rem;
+				border-right: 1px solid #fff;
+				// .test-color1;
+			}
+
+			a:last-child {
+				border: none;
 			}
 		}
 }
@@ -171,7 +195,33 @@ body {
 // Hero Styles
 
 .hero {
-	img {
+	.full-image {
+		.flex-center-between;
 		width: 100%;
+		height: 50vw;
+		background-image: url(https://i.imgur.com/fmewbQG.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+
+			h1 {
+				font-size: 10rem;
+				padding: 5rem;
+				margin: 5rem;
+				background-color: @background-color;
+				opacity: 0.8;
+			}
+
+			span {
+				font-size: 4rem;
+			}
 	}
+}
+
+// About Styles
+
+.about {
+
+		h1 {
+			.heading-underline;
+		}
 }
