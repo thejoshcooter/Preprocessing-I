@@ -1,5 +1,5 @@
 // Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -13,8 +13,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -25,7 +25,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -53,7 +53,223 @@ table {
     box-sizing: border-box;
 }
 
+html {
+	font-size: 62.5%;
+}
+
 html, body {
     height: 100%;
 }
 
+// Variables
+
+// Colors
+@background-color: #2A2A2A;
+@primary-color: #AE3030;
+@highlight-color: #D46A6A;
+
+// Fonts
+@ubuntu: 'Ubuntu', sans-serif;
+@monty: 'Montserrat', sans-serif;
+@font-standard: 1.5rem;
+@font-large: 2rem;
+@font-heading1: 3rem;
+@font-heading2: 2rem;
+
+// Test Variables
+@test-color1: green;
+@test-color2: red;
+@test-color3: blue;
+
+// Mixins
+
+// Flexbox Mixins
+.flex-center-between() {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.flex-center-around() {
+	.flex-center-between;
+	justify-content: space-around;
+}
+
+// Font Control Mixins
+.uppercase() {
+	text-transform: uppercase;
+}
+
+.bold() {
+	font-weight: bold;
+}
+
+.text-center() {
+	text-align: center;
+}
+
+.heading-underline() {
+	padding: 2rem;
+	border-bottom: 1px solid #fff;
+}
+
+// Test Mixins
+.test-color1() {
+	background-color: green;
+}
+
+.test-color2() {
+	background-color: red;
+}
+
+.test-color3() {
+	background-color: blue;
+}
+
+// Global Styles
+
+body {
+	font-family: @monty;
+	font-size: @font-standard;
+	background-color: @background-color;
+	color: #fff;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 2000px;
+	margin: 0 auto;
+	background-color: @background-color;
+
+		section {
+			margin: 5rem 0;
+		}
+
+	@media (max-width: 500px) {
+		.test-color2;
+	}
+}
+
+h1 {
+	font-size: @font-heading1;
+}
+
+h2 {
+	font-size: @font-heading2;
+}
+
+p {
+	padding: 2rem;
+}
+
+// Header & Nav Styles
+
+.main-header {
+	.flex-center-around;
+	margin-top: -5rem;
+	padding: 2rem;
+	background-color: @primary-color;
+	width: 100%;
+	position: fixed;
+	z-index: 100;
+
+		span {
+			.uppercase;
+			.bold;
+			.text-center;
+			font-size: @font-heading2;
+		}
+
+		nav {
+			.flex-center-around;
+
+			a {
+				.text-center;
+				text-decoration: none;
+				color: #fff;
+				font-size: @font-heading2;
+				margin: 0 1rem;
+				padding: 1.5rem 3rem 1.5rem 1.5rem;
+				border-right: 1px solid @highlight-color;
+				// .test-color1;
+			}
+
+			a:last-child {
+				border: none;
+			}
+		}
+}
+
+// Hero Styles
+
+.hero {
+	.full-image {
+		.flex-center-between;
+		width: 100%;
+		height: 50vw;
+		background-image: url(https://i.imgur.com/fmewbQG.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+
+			h1 {
+				font-size: 10rem;
+				padding: 5rem;
+				margin: 5rem;
+				background-color: @background-color;
+				opacity: 0.8;
+			}
+
+			span {
+				font-size: 4rem;
+			}
+	}
+}
+
+// About Styles
+
+.about {
+
+		h1 {
+			.heading-underline;
+		}
+}
+
+// Skills Styles
+
+.skills {
+	.flex-center-between;
+
+	div {
+		.test-color3;
+		display: flex;
+		flex-flow: column nowrap;
+		width: 45%;
+		height: 60rem;
+		margin: 0 5%;
+
+			ul {
+				.flex-center-around;
+			}
+
+			img {
+				width: 80%;
+				margin: 0 auto;
+			}
+	}
+}
+
+// Work Styles
+
+.work {
+
+		h1 {
+			.heading-underline;
+		}
+
+		div {
+			.test-color3;
+			margin: 2rem;
+			padding: 3rem;
+			border-bottom: 1px solid #fff;
+		}
+}
